@@ -29,11 +29,9 @@ def generate_get_state(states):
 def generate_word(corpus, s_corpus):
 	word_lists = create_s_corpus_location(corpus, s_corpus)
 
-	print("hello")
 	result = ""
 	idx = 0
 	for word_list in word_lists:
-		print(idx)
 		if s_corpus[idx] == 'UseStart' or s_corpus[idx] == 'UseStop':
 			idx += 1
 			continue
