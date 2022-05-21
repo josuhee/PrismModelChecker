@@ -1,7 +1,7 @@
 # 파일 출력 및 corpus, s_corpus 저장
 def open_file(corpus, s_corpus, origin_corpus):
 	f = open("../file/sample-sequence.txt", "r")
-	
+
 	while True:
 		state = f.readline()
 		if not state:
@@ -16,3 +16,8 @@ def open_file(corpus, s_corpus, origin_corpus):
 					s_corpus.append(i)
 
 	return corpus, s_corpus, origin_corpus
+
+def write_file(result):
+	f = open("../file/result.prism", 'w')
+	f.write(result)
+	f.close

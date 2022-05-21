@@ -19,5 +19,4 @@ def generate_transition(transition, corpus, transition_sum):
 		dtmc_code += ";\n"
 	dtmc_code += "endmodule\n\n"
 
-	print(dtmc_code)
 	return dtmc_code
