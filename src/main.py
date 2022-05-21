@@ -35,7 +35,11 @@ def count_transition():
 	previous = corpus.index("UseStart")
 	current = previous
 	for i in range(1, len(origin_corpus)-1):
-		current = corpus.index(origin_corpus[i])
+		try:
+			current = corpus.index(origin_corpus[i])
+		except:
+			print("{}은(는) 존재하지 않습니다.".format(origin_corpus[i]))
+			continue
 		transition[previous][current] += 1
 		
 		previous = current
