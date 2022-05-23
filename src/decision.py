@@ -8,7 +8,7 @@ def generate_decision(corpus, s_corpus):
 		decision_state = set(label_location[s_corpus.index("decision")])
 		role = ["PM", "ME", "UI", "ID"]
 		
-		for i in range(0, len(roll)):
+		for i in range(0, len(role)):
 			role_state = set(label_location[s_corpus.index(role[i])])
 			intersection_state = role_state | decision_state
 			dtmc_code += 'rewards "r_' + role[i] + '_decision"\n'
