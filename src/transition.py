@@ -3,7 +3,7 @@ def generate_transition(transition, corpus, transition_sum):
 	dtmc_code = ""
 
 	dtmc_code += "dtmc\n\n"
-	dtmc_code += "const init_y=0\n\n"
+	dtmc_code += "const init_y=0;\n\n"
 	dtmc_code += "module DTMC\n"
 	dtmc_code += "  y:[0..{}] init init_y;\n\n".format(len(corpus)-1)
 

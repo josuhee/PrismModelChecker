@@ -6,12 +6,12 @@ def generate_decision(corpus, s_corpus):
 
 	try:
 		decision_state = set(label_location[s_corpus.index("decision")])
-		roll = ["PM", "ME", "UI", "ID"]
+		role = ["PM", "ME", "UI", "ID"]
 		
 		for i in range(0, len(roll)):
-			roll_state = set(label_location[s_corpus.index(roll[i])])
-			intersection_state = roll_state | decision_state
-			dtmc_code += 'rewards "r_' + roll[i] + '_decision"\n'
+			role_state = set(label_location[s_corpus.index(role[i])])
+			intersection_state = role_state | decision_state
+			dtmc_code += 'rewards "r_' + role[i] + '_decision"\n'
 			intersection_state = list(intersection_state)
 			intersection_state.sort()
 
